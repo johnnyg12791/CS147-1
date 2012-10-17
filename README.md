@@ -1,6 +1,8 @@
 Introduction to Human Computer Interaction: CS147
 =====
 
+john edit
+
 This is the repository for content for CS147, Introduction to Human Computer Interaction, Fall 2012, offered at Stanford. This is the technical lab component material taught by Rio Akasaka.
 
 Course Material
