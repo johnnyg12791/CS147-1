@@ -13,7 +13,9 @@
 	</head>
 
 	<body>
-			<!-- This is the top bit with the image. 
+	<style>
+	
+	</style>		<!-- This is the top bit with the image. 
 		I wonder why there's no image tag here? -->
 		<div class="whitebit"></div>
 
@@ -23,8 +25,13 @@
 			<div id="button">Refresh GPS: <div id="timer"></div></div>
 
 			<div class="area">
+<<<<<<< HEAD
 				<div class="box box1">lets go<div class="latitude"></div></div>
 				<div class="box box2">yankees<div class="longitude"></div></div>
+=======
+				<div class="box box1"><div class="latitude">Blah</div></div>
+				<div class="box box2"><div class="longitude"></div></div>
+>>>>>>> b3dacea09ff430bf4988b594f3098ed8216df35c
 			</div>
 
 		</div>
@@ -33,6 +40,21 @@
 		<script type="text/javascript">
 		var count = 30;
 		var counter = setInterval(timer, 1000); 
+<<<<<<< HEAD
+=======
+		
+		function timer() {
+		    count = count - 1;
+		    if (count <= 0) {
+		        clearInterval(counter);
+		        alert("Boom!");
+		        document.getElementById('button').style.visibility = 'hidden';
+		        return;
+		    }
+		
+		    document.getElementById("timer").innerHTML = count + " secs";
+		}
+>>>>>>> b3dacea09ff430bf4988b594f3098ed8216df35c
 
 		function timer() {
 		count = count - 1;
@@ -50,6 +72,7 @@
 		<!-- Let's put in the geolocation stuff here -->
 		<script type="text/javascript">
 		$(function () {
+<<<<<<< HEAD
 			$("#button").click(function () {
 				getLocation();
 			});
@@ -67,6 +90,27 @@
 			alert(position.coords.latitude);
 			alert(position.coords.longitude);
 		}
+=======
+    $("#button").click(function () {
+        getLocation();
+    });
+});
+
+function getLocation() {
+    if (navigator.geolocation) {
+       navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        alert("Geolocation is not supported by this browser.");
+    }
+}
+
+function showPosition(position) {
+    $(".box1").html(position.coords.latitude);
+    $(".box2").html(position.coords.longitude);
+} 
+
+getLocation();
+>>>>>>> b3dacea09ff430bf4988b594f3098ed8216df35c
 		</script>
 	</body>
 </html>
